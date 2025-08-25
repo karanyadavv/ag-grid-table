@@ -11,8 +11,8 @@
 }
 
 .ag-theme-quartz {
-  border-radius: 8px; /* optional: rounded corners */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  border-radius: 8px; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border: none;
   --ag-font-family: 'Inter', sans-serif;
   text-align: left !important;
