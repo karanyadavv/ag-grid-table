@@ -10,3 +10,8 @@
 
 }
 
+html, body {
+  font-family: 'Inter', sans-serif;
+  margin: 0; /* optional: remove default margins */
+  padding: 0;
+}

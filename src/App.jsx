@@ -4,7 +4,7 @@ import AgGridTable from "./components/Table";
 function App() {
   return (
     <>
-      <div>Ag-grid table</div>
+      <div className="header">Ag-grid table</div>
       <AgGridTable />
     </>
   );
