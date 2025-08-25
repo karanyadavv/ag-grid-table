@@ -2,23 +2,18 @@ import React, { useState } from "react";
 import { AllCommunityModule, ModuleRegistry } from "ag-grid-community";
 ModuleRegistry.registerModules([AllCommunityModule]);
 import { AgGridReact } from "ag-grid-react"; // React Data Grid Component
+import data from "../data/data.json";
 
 const AgGridTable = () => {
-  const [rowData, setRowData] = useState([
-    { make: "Tesla", model: "Model Y", price: 64950, electric: true },
-    { make: "Ford", model: "F-Series", price: 33850, electric: false },
-    { make: "Toyota", model: "Corolla", price: 29600, electric: false },
-  ]);
+  const [rowData, setRowData] = useState(data.employees);
 
-  // Column Definitions: Defines the columns to be displayed.
-  const [colDefs, setColDefs] = useState([
-    { field: "make" },
-    { field: "model" },
-    { field: "price" },
-    { field: "electric" },
-  ]);
+  const cols = Object.keys(data.employees[0]).map((item) => ({
+    field: item,
+  }));
+  console.log(cols);
+  const [colDefs, setColDefs] = useState(cols);
   return (
-    <div style={{ height: 500 }}>
+    <div style={{ height: 800 }}>
       <AgGridReact rowData={rowData} columnDefs={colDefs} />
     </div>
   );
