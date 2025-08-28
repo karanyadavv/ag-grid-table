@@ -26,8 +26,22 @@ const AgGridTable = () => {
     headerFontSize: 14,
   });
   return (
-    <div className="ag-theme-quartz" style={{ height: 700, marginTop: 40 }}>
-      <AgGridReact rowData={rowData} columnDefs={colDefs} theme={myTheme} />
+    <div className="ag-theme-quartz" style={{ height: 550, marginTop: 40 }}>
+      <AgGridReact
+        rowData={rowData}
+        columnDefs={colDefs}
+        theme={myTheme}
+        animateRows={true}
+        pagination={true}
+        paginationPageSize={10}
+        defaultColDef={{
+          sortable: true,
+          filter: true,
+          resizable: true,
+          menuTabs: ["filterMenuTab", "generalMenuTab"],
+          floatingFilter: false,
+        }}
+      />
     </div>
   );
 };
